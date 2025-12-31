@@ -1,6 +1,5 @@
 import express from "express";
 import {
-  createArticle,
   getAllArticles,
   getArticleById,
   updateArticle,
@@ -9,7 +8,6 @@ import {
 
 const router = express.Router();
 
-router.post("/", createArticle);
 router.get("/", getAllArticles);
 router.get("/:id", getArticleById);
 router.put("/:id", updateArticle);

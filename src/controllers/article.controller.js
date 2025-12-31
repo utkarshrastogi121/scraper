@@ -1,12 +1,6 @@
 import Article from "../models/article.model.js";
 import redisClient from "../config/redis.js";
 
-export const createArticle = async (req, res) => {
-  const article = await Article.create(req.body);
-  await redisClient.del("articles:all");
-  res.status(201).json(article);
-};
-
 export const getAllArticles = async (req, res) => {
   const cacheKey = "articles:all";
 
