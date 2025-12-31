@@ -9,7 +9,7 @@ const updatedArticleSchema = new mongoose.Schema(
 
     originalArticleId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Article", // phase-1 article model
+      ref: "Article",
       required: true,
     },
 

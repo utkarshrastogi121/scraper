@@ -15,7 +15,6 @@ const scrapeLatestBlogs = async () => {
 
     await page.goto(process.env.BLOGS_URL, { waitUntil: "networkidle2" });
 
-    // Wait for the main container of articles
     await page.waitForSelector(".entries .entry-card", { timeout: 10000 });
 
     const articles = await page.evaluate((BASE_URL) => {
